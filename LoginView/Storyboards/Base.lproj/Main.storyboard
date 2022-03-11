@@ -26,11 +26,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="t1u-Of-8LH"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qBY-G3-4WI">
                                                 <rect key="frame" x="0.0" y="65" width="288" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="g5i-tW-I14"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -41,7 +47,6 @@
                                         <state key="normal" title="Log In"/>
                                         <connections>
                                             <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="MaM-me-Uyx"/>
-                                            <segue destination="3Dr-m5-qQJ" kind="presentation" identifier="openWelcomeVC" id="F0U-ME-OVs"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Z8X-an-3vn">
@@ -59,9 +64,6 @@
                                                 <rect key="frame" x="165" y="0.0" width="123" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Forgot Password?"/>
-                                                <connections>
-                                                    <action selector="showAutorizationData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZNt-Ha-f8k"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -69,7 +71,8 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="tintColor" systemColor="labelColor"/>
                         <constraints>
                             <constraint firstItem="muN-cd-DUm" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-32" id="D2y-X8-KgB"/>
                             <constraint firstItem="muN-cd-DUm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XP0-2a-Ppj"/>
@@ -79,11 +82,12 @@
                     <connections>
                         <outlet property="passwordTextField" destination="qBY-G3-4WI" id="hNM-95-fOI"/>
                         <outlet property="userNameTextField" destination="eMo-pN-mHw" id="N5n-fU-Qwv"/>
+                        <segue destination="3Dr-m5-qQJ" kind="presentation" identifier="openWelcomeVC" modalPresentationStyle="fullScreen" id="aB3-Bj-qVT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29.23076923076923" y="83.886255924170612"/>
+            <point key="canvasLocation" x="6" y="83"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="yuo-aD-Stb">
@@ -119,7 +123,8 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3bs-A8-h62"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="tintColor" systemColor="labelColor"/>
                         <constraints>
                             <constraint firstItem="aof-wN-cJ5" firstAttribute="centerX" secondItem="DsW-Da-2vb" secondAttribute="centerX" id="51d-TB-XHr"/>
                             <constraint firstItem="IUA-cY-gjG" firstAttribute="centerX" secondItem="DsW-Da-2vb" secondAttribute="centerX" id="9Zq-fF-VdC"/>
@@ -140,8 +145,11 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
