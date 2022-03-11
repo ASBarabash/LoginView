@@ -151,37 +151,64 @@
                     <view key="view" contentMode="scaleToFill" id="38O-fM-oVP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufL-sT-E5X">
+                                <rect key="frame" x="16" y="182" width="288" height="204.5"/>
+                                <string key="text">Меня зовут Барабаш Александр Сергеевич.
+Мне 35 лет. Мой родной город Новосибирск, но уже 10 лет я живу в Москве и работаю продавцом автомобилей БМВ. Если тебе интересно узнать какое у меня хобби, то листай дальше!</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5wA-aN-sOi"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ufL-sT-E5X" secondAttribute="trailing" constant="16" id="1al-Xi-m73"/>
+                            <constraint firstItem="ufL-sT-E5X" firstAttribute="leading" secondItem="38O-fM-oVP" secondAttribute="leading" constant="16" id="3wC-tJ-dkv"/>
+                            <constraint firstItem="ufL-sT-E5X" firstAttribute="centerY" secondItem="38O-fM-oVP" secondAttribute="centerY" id="kpk-Rx-JML"/>
+                            <constraint firstItem="ufL-sT-E5X" firstAttribute="centerX" secondItem="38O-fM-oVP" secondAttribute="centerX" id="o5i-3l-wcW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="w5Y-oI-jwo">
-                        <barButtonItem key="rightBarButtonItem" title="Photo" id="L4w-tf-BLd"/>
+                        <barButtonItem key="rightBarButtonItem" title="Photo" id="L4w-tf-BLd">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <segue destination="ygA-dF-pOP" kind="show" id="Rlc-gV-21Y"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="e5c-uR-1WJ" kind="show" id="HGI-4q-1vL"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ooz-7j-PrU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1759" y="893"/>
+            <point key="canvasLocation" x="1758.75" y="892.6056338028169"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="YB1-Iu-5Tw">
+        <scene sceneID="x8m-Q0-UJb">
             <objects>
-                <viewController id="e5c-uR-1WJ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PPi-tQ-OVR">
+                <viewController id="ygA-dF-pOP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AMZ-KT-HRi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="MpP-Dm-DWB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_4357" translatesAutoresizingMaskIntoConstraints="NO" id="AZR-53-wdz">
+                                <rect key="frame" x="16" y="44" width="288" height="475"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZPJ-9o-gGb"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstItem="AZR-53-wdz" firstAttribute="bottom" secondItem="ZPJ-9o-gGb" secondAttribute="bottom" id="VqC-QB-Xqc"/>
+                            <constraint firstItem="AZR-53-wdz" firstAttribute="top" secondItem="ZPJ-9o-gGb" secondAttribute="top" id="cKP-de-cmp"/>
+                            <constraint firstItem="AZR-53-wdz" firstAttribute="leading" secondItem="ZPJ-9o-gGb" secondAttribute="leading" constant="16" id="mov-aP-hQ2"/>
+                            <constraint firstItem="ZPJ-9o-gGb" firstAttribute="trailing" secondItem="AZR-53-wdz" secondAttribute="trailing" constant="16" id="vY8-8d-3Qf"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="iuY-0Q-4Hn">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="agX-lh-bjT"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="UMY-wY-G2h"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="way-Pc-uDK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X5j-0u-x5N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2608" y="893"/>
+            <point key="canvasLocation" x="2572.5" y="892.6056338028169"/>
         </scene>
         <!--Hobby-->
         <scene sceneID="JTZ-8k-Ude">
@@ -190,8 +217,22 @@
                     <view key="view" contentMode="scaleToFill" id="9gK-Hv-Fbh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мое хобби - музыка! " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XwV-m1-d5J">
+                                <rect key="frame" x="16" y="274" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Tcf-0I-gbA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XwV-m1-d5J" firstAttribute="centerX" secondItem="9gK-Hv-Fbh" secondAttribute="centerX" id="9BD-1b-4IS"/>
+                            <constraint firstItem="XwV-m1-d5J" firstAttribute="centerY" secondItem="9gK-Hv-Fbh" secondAttribute="centerY" id="JsL-ch-SG5"/>
+                            <constraint firstItem="Tcf-0I-gbA" firstAttribute="trailing" secondItem="XwV-m1-d5J" secondAttribute="trailing" constant="16" id="M4t-Gi-lVW"/>
+                            <constraint firstItem="XwV-m1-d5J" firstAttribute="leading" secondItem="Tcf-0I-gbA" secondAttribute="leading" constant="16" id="zTA-EH-U8a"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Hobby" image="music.quarternote.3" catalog="system" id="Jqe-Jn-TbC"/>
                 </viewController>
@@ -228,6 +269,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5uV-LN-NW7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -240,11 +282,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="IMG_4357" width="4000" height="6000"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="music.quarternote.3" catalog="system" width="128" height="103"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
