@@ -16,13 +16,26 @@ class LoginViewController: UIViewController {
     // MARK: - Private properties
     private let user = "User"
     private let password = "Password"
+    private let person = Person.getInfoPerson()
     
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = user
-    }
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
         
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = person.name
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let infoVC = navigationVC.topViewController as? InfoViewController else { return }
+                infoVC.name = person.name
+                infoVC.age = String(person.age)
+                infoVC.city = person.city
+                infoVC.hobby = person.hobby
+            }
+        }
+    }
+
     // MARK: IBActions
     @IBAction func logInButtonPressed() {
         guard userNameTextField.text == user, passwordTextField.text == password else {
